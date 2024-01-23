@@ -25,7 +25,7 @@ class _NumState extends State<Num> {
               children: [
                 Text(
                   widget.num.toString(),
-                  style: TextStyle(fontSize: 50),
+                  style: const TextStyle(fontSize: 50),
                 )
               ],
             ),

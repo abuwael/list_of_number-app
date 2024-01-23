@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'List of num Demo',
       theme: ThemeData(useMaterial3: true),
-      home: Home(),
+      home: const Home(),
     );
   }
 }

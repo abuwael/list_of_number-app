@@ -19,7 +19,7 @@ class _HomeState extends State<Home> {
         mainAxisSpacing: 4,
         crossAxisSpacing: 4,
         children: [
-          CustomBottom(text: "add"),
+          const CustomBottom(text: "add"),
           ...List.generate(
               5,
               (index) => GestureDetector(
