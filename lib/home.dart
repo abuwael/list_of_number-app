@@ -14,19 +14,22 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text("List Of Number"), centerTitle: true),
-      body: GridView.count(
-        crossAxisCount: 2,
-        mainAxisSpacing: 4,
-        crossAxisSpacing: 4,
-        children: [
-          const CustomBottom(text: "add"),
-          ...List.generate(
-              5,
-              (index) => GestureDetector(
-                    onTap: () => Navigator.push(context, MaterialPageRoute(builder: (contxt) => Num(num: (index + 1)))),
-                    child: CustomBottom(text: (index + 1).toString()),
-                  ))
-        ],
+      body: Padding(
+        padding: const EdgeInsets.all(12.0),
+        child: GridView.count(
+          crossAxisCount: 2,
+          mainAxisSpacing: 4,
+          crossAxisSpacing: 4,
+          children: [
+            const CustomBottom(text: "add"),
+            ...List.generate(
+                5,
+                (index) => GestureDetector(
+                      onTap: () => Navigator.push(context, MaterialPageRoute(builder: (contxt) => Num(num: (index + 1)))),
+                      child: CustomBottom(text: (index + 1).toString()),
+                    ))
+          ],
+        ),
       ),
     );
   }
